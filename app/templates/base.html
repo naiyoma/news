@@ -3,5 +3,13 @@
     <head>
         <meta charset = "utp-8">
         {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title> Welcome to the news website</title>
+        {% endif %}
     </head>
+    <body>
+        {% block content %}
+        { % endblock %}
+    </body>
 </html>
