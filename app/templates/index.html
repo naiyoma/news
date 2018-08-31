@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>Welcome to the bestttt news site</title>
+        {% endif %}
+    </head>
+    <body>
+        <ul>
+            {% for category_new in category_news %}
+            <li>{{ category_new.name }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
