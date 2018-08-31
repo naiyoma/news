@@ -22,4 +22,4 @@ def new(id):
     new = get_new(id)
     title = f'{new.name}'
 
-    return render_te    
+    return render_template('news.html',name=name,new=new)    
