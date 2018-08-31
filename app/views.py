@@ -16,3 +16,10 @@ def index():
     print(category_news)
     title = 'great news here'
     return render_template('index.html',title = title, category_news = category_news, technology = technology, business = business)
+
+@app.route('/new/<int:id>')
+def new(id):
+    new = get_new(id)
+    title = f'{new.name}'
+
+    return render_te    
