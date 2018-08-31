@@ -1,6 +1,7 @@
 from flask import render_template
 from app import app
 from .request import get_news
+from .request import get_new
 
 
 @app.route('/news/<int:news_id>')
