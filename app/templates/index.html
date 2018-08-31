@@ -1,3 +1,4 @@
+<!-- {% import 'marcos.html' as macro %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,10 +10,41 @@
         {% endif %}
     </head>
     <body>
+        <h3>Sports News</h3>
         <ul>
-            {% for category_new in category_news %}
-            <li>{{ category_new.name }}</li>
+            {% for category in category_news %}
+            <li>{{ category.name }}</li>
+            {% endfor %}
+        </ul>
+        <h3>technology news </h3>
+        <ul>
+        {% for tech in technology %}
+        <li>{{ tech.name }}</li>
+        {% endfor %}
+        </ul>
+        <h3>business</h3>
+        <ul>
+            {% for healthy in business %}
+            <li>{{healthy.name}}</li>
             {% endfor %}
         </ul>
     </body>
-</html>
+</html> -->
+
+{% import 'marcos.html' as macro %}
+<body>
+    <h3>sports news</h3>
+    <ul>
+        {{ macro.displayNewsList(category_news)}}
+    </ul>
+    <h3>technology</h3>
+    <ul>
+        {{ macro.displayNewsList(technology)}}
+    </ul>
+    <ul>
+        <h3>businesses</h3>
+    </ul>
+    
+
+
+</body>

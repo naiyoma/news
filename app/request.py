@@ -32,9 +32,11 @@ def process_sources(news_list):
         description = news_item.get('description')
         url = news_item.get('url')
         category = news_item.get('category')
+        language = news_item.get('language')
+        country = news_item.get('country')
 
         if url:
-            news_object = News(id,name,description,url,category)
+            news_object = News(id,name,description,url,category,language,country)
             news_results.append(news_object)
 
     return news_results    

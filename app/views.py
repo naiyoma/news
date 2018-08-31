@@ -10,6 +10,8 @@ def news(news_id):
 def index():
     #getting categories
     category_news = get_news('sports')
+    technology = get_news('technology')
+    business = get_news('business')
     print(category_news)
     title = 'great news here'
-    return render_template('index.html',title = title, category_news = category_news)
+    return render_template('index.html',title = title, category_news = category_news, technology = technology, business = business)
