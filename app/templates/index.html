@@ -32,7 +32,8 @@
 </html> -->
 {% extends 'base.html'%}
 {% import 'marcos.html' as macro %}
-<body>
+{% block content%}
+<body>   
     <h3>sports news</h3>
     <ul>
         {{ macro.displayNewsList(category_news)}}
@@ -44,7 +45,5 @@
     <ul>
         <h3>businesses</h3>
     </ul>
-    
-
-
 </body>
+{% endblock %}
