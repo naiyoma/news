@@ -1,12 +1,26 @@
+{% extends 'base.html'%}
 <body>
+        {% block content %}
+
+        
     <h1>welcome to news{{ id }}</h1>
     <ul>
+        <div class="container-fluid">
+            <div class="">
     {% for new in articles %}
-        <li>{{new.description}}</li>
-        <li>{{new.publishedAt}}</li>
-        <img src="{{ new.urlToImage }}" alt="{{ new.title }} poster" class="img-responsive">
+    <div class="col-md-3">
+        <div class="card">
+        <div class="card-header">{{new.description}}</div>
+        <br>{{new.publishedAt}}<br>
+        <img src="{{ new.urlToImage }}" alt="{{ new.title }} poster" class="img-responsive" class='img-responsive img-circle' width='200' height="200" >
+    </div>
+    </div>
+    </div>
     {% endfor %} 
-    </ul>
+    </div>
+    </div>
+</div>
+    {% endblock%}
 </body>
 
   

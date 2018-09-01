@@ -2,18 +2,29 @@
 {% extends 'base.html'%}
 {% import 'marcos.html' as macro %}
 {% block content%}
-<body>   
+<body> 
+    <div class = "containe"> 
+        <div class="row">
+            <div class="col-md-4">
     <h3>sports news</h3>
     <ul>
         {{ macro.displayNewsList(category_news)}}
     </ul>
+    </div>
+    <div class="col-md-4">
     <h3>technology</h3>
     <ul>
         {{ macro.displayNewsList(technology)}}
     </ul>
     <ul>
+    </div>
+    </div>
+    <div class="col-md-4">
         <h3>businesses</h3>
         {{macro.displayNewsList(business)}}
     </ul>
+    </div>
+    </div>
+    </div>
 </body>
 {% endblock %}
