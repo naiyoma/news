@@ -1,1 +1,12 @@
-<h1>welcome to news{{ id }}</h1>
+<body>
+    <h1>welcome to news{{ id }}</h1>
+    <ul>
+    {% for new in articles %}
+        <li>{{new.description}}</li>
+        <li>{{new.publishedAt}}</li>
+        <img src="{{ new.urlToImage }}" alt="{{ new.title }} poster" class="img-responsive">
+    {% endfor %} 
+    </ul>
+</body>
+
+  
