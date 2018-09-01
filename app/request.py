@@ -9,6 +9,9 @@ api_key = app.config['NEWS_API_KEY']
 
 #Getting the news base url
 base_url = app.config["NEWS_API_BASE_URL"] 
+
+#Getting the articles base url
+base_url = app.config["ARTICLES_API_BASE_URL"]
 def get_news(category):
     get_news_url = base_url.format(category, api_key)
     with urllib.request.urlopen(get_news_url) as url:
@@ -41,22 +44,23 @@ def process_sources(news_list):
 
     return news_results
 
-def get_new(id):
-    get_new_details_url = base_url.format(id,api_key)
+def get_articles(id):
+    get_articles_details_url = base_url.format(id,api_key)
 
-    with urllib.request.urlopen(get_new_details_url) as url:
-        new_details_data = url.read()
-        new_details_response = json.loads(new_details_data)
+    with urllib.request.urlopen(get_articles_details_url) as url:
+        articles_details_data = url.read()
+        articles_details_response = json.loads(articles_details_data)
 
-        new_object = None
-        if new_details_response:
-            id = new_details_response.get('id')
-            name = new_details_response.get('name')
-            description = new_details_response.get('description')
-            url = new_details_response.get('url')
-            category= new_details_response.get('category')
-            language = new_details_response.get('language')
-            country = new_details_response.get('country')
+        articles_object = None
+        if articles_details_response:
+            id = articles_details_response.get('id')
+            authors = articles_details_response.get('authors')
+            title = articles_details_response.get('title')
+            description = articles_details_response.get('description')
+            url = articles_details_response.get('url')
+            urlToImage= articles_details_response.get('"urlToImage')
+            publishedAt= articles_details_response.get('publishedAt')
+        
         new_object=News(id,name,description,url,category,language,country)
 
     return new_object        
