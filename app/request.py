@@ -94,4 +94,7 @@ def search_news(news_name):
         search_news_response = json.loads(search_news_data)
 
         search_news_results = None
-           
+
+        if search_news_response['results']:
+            search_news_list = search_news_response['results']
+            search_news_results = process_results(search_news_list)   
