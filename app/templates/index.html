@@ -8,32 +8,32 @@
     
 {% endblock %}
 
-<body> 
+<body style="background-image: url('http://www.diamondfacts.org/wp-content/uploads/2017/03/grey-map.png')"> 
     <div class = "container"> 
-        <div class="row" id="row">
+        <div class="row" style="opacity: 0.9;" >
             <div class="card">
             <div class="col-md-4" id="card1">
-    <h3>sports news</h3>
+    <h3 style="color:white">Sports News</h3>
     <ul>
         {{ macro.displayNewsList(category_news)}}
     </ul>
     </div>
     </div>
     <div class="col-md-4">
-    <h3>technology</h3>
+    <h3 style="color: white">Technology News</h3>
     <ul>
         {{ macro.displayNewsList(technology)}}
     </ul>
-    <ul>
-    </div>
-
+    
+    </div> 
     <div class="col-md-4">
-        <h3>businesses</h3>
+        <h3 style="color:white">Businesses News</h3>
+        <ul>
         {{macro.displayNewsList(business)}}
     </ul>
     </div>
     </div>
     </div>
-    </div>
+    
 </body>
 {% endblock %}
