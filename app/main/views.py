@@ -22,5 +22,5 @@ def articles(id):
 
     return render_template('news.html',articles=articles)   
 
-1.we import render template function from flask that will take my html templates as arguments and then load them
- 
+# 1.we import render template function from flask that will take my html templates as arguments and then load them
+# 2.creationg main decorators that will define function index
