@@ -32,11 +32,11 @@ def get_news(category):
 
         if get_news_response["sources"]:
             news_sources_list = get_news_response["sources"]
-            news_result = process_sources(news_sources_list)
+            news_result = process_news(news_sources_list)
 
     return news_result
 
-def process_sources(news_list):
+def process_news(news_list):
     
     news_results=[]
     for news_item in news_list:
@@ -97,8 +97,19 @@ def search_news(news_name):
 
         if search_news_response['results']:
             search_news_list = search_news_response['results']
-            search_news_results = process_results(search_news_list)   
+            # search_news_results = process_results(search_news_list)   
 
     return search_news_results 
 
-# 1.folder where all API request will be made
+# 1.folder where all API  calls  and request will be made
+#2.impoerting the urllib.request is connecting me to the API URL
+#3. we then access the configurations and the pass in the base urls and the key and the base url
+#4.the first function which is the get_news function takes in category as a argument and the call the.format method which will replace {} as place hlders this will generate our get news url which we will use to make the request
+# the read method reads the news data ,with which is the context manager sends request to the base url
+#conver json response to a python dictionary using load we then return the news list(results)
+
+#process_news 
+# 1 created a function that will take in the news list 
+# an empty news list which will store the news objects of our news is then created
+# we loop through each element in the news_list and then pass in the id to access the data
+# we then check if the movie item has a url and then create an news object which will be appended to our empty list
