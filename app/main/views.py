@@ -25,4 +25,5 @@ def articles(id):
 # 1.we import render template function from flask that will take my html templates as arguments and then load them
 # 2.creationg main decorators that will define function index
 #3.route number one has a news function and i mapped the movie_id so that we can get a response in my news.html
-#4.am going to make an api call for specific categories g
+#4.am going to make an api call for specific categories of or news
+#.we create a variable for each category and then pass the results to our render template
