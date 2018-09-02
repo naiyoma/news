@@ -1,12 +1,12 @@
-from flask import render_template
-from app import app
-from .request import get_articles, get_news
+from flask import render_template,request,redirect,url_for
+from . import main
+from ..request import get_articles, get_news
+from ..models import News,Articles
 
-
-@app.route('/news/<int:news_id>')
+@main.route('/news/<int:news_id>')
 def news(news_id):
     return render_template('news.html',id = news_id)  
-@app.route('/')
+@main.route('/')
 def index():
     #getting categories
     category_news = get_news('sports')
@@ -16,7 +16,7 @@ def index():
     title = 'great news here'
     return render_template('index.html',title = title, category_news = category_news, technology = technology, business = business)
 
-@app.route('/news/<id>')
+@main.route('/news/<id>')
 def articles(id):
     articles = get_articles(id)
 
