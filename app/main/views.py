@@ -20,4 +20,7 @@ def index():
 def articles(id):
     articles = get_articles(id)
 
-    return render_template('news.html',articles=articles)    
+    return render_template('news.html',articles=articles)   
+
+1.we import render template function from flask that will take my html templates as arguments and then load them
+ 
