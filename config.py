@@ -16,4 +16,5 @@ config_options = {
     'production':ProdConfig
 }    
 
-#we have 3 classes one is the parent and all the others from it the dev config enables us to debug        
+# 1.i have created 3 classes the 1st is the parent which contains all my configurations
+# 2.the 2nd and 3rd configurations inherit configurations from our parent the devconfig helps in debugging       
