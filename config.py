@@ -16,5 +16,5 @@ config_options = {
     'production':ProdConfig
 }    
 
-# 1.i have created 3 classes the 1st is the parent which contains all my configurations
+# 1.i have created 3 classes the 1st is the parent which contains all my configurations and also stores the base url
 # 2.the 2nd and 3rd configurations inherit configurations from our parent the devconfig helps in debugging       

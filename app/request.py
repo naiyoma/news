@@ -99,4 +99,6 @@ def search_news(news_name):
             search_news_list = search_news_response['results']
             search_news_results = process_results(search_news_list)   
 
-    return search_news_results        
+    return search_news_results 
+
+# 1.folder where all API request will be made

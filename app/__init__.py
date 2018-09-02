@@ -30,15 +30,5 @@ def create_app(config_name):
     configure_request(app)
 
     return app
-
-# #setting up configurations
-# app.config.from_object(DevConfig)
-# app.config.from_pyfile('config.py')
-
-# #initializing flask Extensions
-# bootstrap = Bootstrap(app)
-
-# from app import views
-
-#we import our child class  and then set it up using the app.config method
-# i the connceted my __init__.py with the instance using(app.config.from_pyfile)
+# 1.i imported the DevConfig class and then used the object method to pass configurations to the DevConfig
+# 2.inserting the instance relative config to connect it with the rest of the application
