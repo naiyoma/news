@@ -1,29 +1,23 @@
 {% extends 'base.html'%}
-<body style="background-color: aqua;">
-        {% block content %}
-
-        <body>  
-    <h1>welcome to news{{ id }}</h1>
-    <ul>
-
-<div class="row">
+<body style="background-color: aqua;"></body>
+{% block content %}          
+<div class="container-fluid" style="background-color: #4E605B;">
 {% for new in articles %}
 <div class="col-md-4">
-
-<div class="card-header">{{new.description}}</div>
-    
-    <img src="{{ new.urlToImage }}" alt="{{ new.title }} poster" class="img-responsive" class='img-responsive img-circle' width='350px' height="250px" >
-<p>Published At: {{new.publishedAt}}<p>
-
-<a href="{{new.url}}"><button>click me</button></a>
+<div>
+    <div class="thumbnail" style="background-color: #98b9ab;">
+        <div class="card-body">
+            <img src="{{ new.urlToImage }}" alt="{{ new.title }} poster" class="img-responsive thumbnail" class='img-responsive img-circle' width='350px' height="250px" ></div>
+            <div class="card-title">{{new.description}}</div> 
+            <div class="card-text"><p>Published At: {{new.publishedAt}}<p></p></div>
+            <div class="card-footer" style="align-content: center;"><a href="{{new.url}}"><button type="button" class="btn btn-success">View article</button></a></div>
+        </div>
+        
+    </div>  
 </div>
-</div>
-
 {% endfor %} 
 </div>
-</div>
-    </div>
-</div>
+
     {% endblock%}
 </body>
 

@@ -19,6 +19,12 @@ Inorder to clone , follow the procedure below;
 `git add deploy.php`
 `git commit -m 'Added the git deployment script'`
 `git push -u origin master`
+#Running the app
+- `./start.sh`
+- `python3.6 manage.py server`
+
+#testing
+- `python3.6 manage.py test`
 ## Known Bugs
 - the website does not function well on explorer
 ## Technologies Used
@@ -32,3 +38,7 @@ Inorder to clone , follow the procedure below;
 ### License
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 Copyright (c) {2018} **{By Aurelia Naiyoma}**
+# A live link to heroku app
+https://news-high-54.herokuapp.com/news/ars-technica
+
+
