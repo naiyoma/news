@@ -5,23 +5,23 @@
         <body>  
     <h1>welcome to news{{ id }}</h1>
     <ul>
-       
-            <div class="row">
-                {% for new in articles %}
-                <div class="col-md-4">
-                    
-                        <div class="card-header">{{new.description}}</div>
-                       
-                        <img src="{{ new.urlToImage }}" alt="{{ new.title }} poster" class="img-responsive" class='img-responsive img-circle' width='350px' height="250px" >
-                        <p>Published At: {{new.publishedAt}}<p>
-                
-                        <a href="{{new.url}}"><button>click me</button></a>
-                    </div>
-                </div>
-                
-                {% endfor %} 
-            </div>
-        </div>
+
+<div class="row">
+{% for new in articles %}
+<div class="col-md-4">
+
+<div class="card-header">{{new.description}}</div>
+    
+    <img src="{{ new.urlToImage }}" alt="{{ new.title }} poster" class="img-responsive" class='img-responsive img-circle' width='350px' height="250px" >
+<p>Published At: {{new.publishedAt}}<p>
+
+<a href="{{new.url}}"><button>click me</button></a>
+</div>
+</div>
+
+{% endfor %} 
+</div>
+</div>
     </div>
 </div>
     {% endblock%}

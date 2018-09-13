@@ -6,24 +6,27 @@ from .models import Articles
 # News = news.News
 # Articles = articles.Articles
 #Getting api key
-api_key = None
+api_key = '6fea05c04bb243cd8d0fe4a6fb98dbc7'
 
 #Getting the news base url
-base_url = None 
+# base_url = None 
+base_url='https://newsapi.org/v2/sources?&category={}&apiKey={}'
 
 #Getting the articles base url
-base2_url =None
+base2_url ='https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
 
-def configure_request(app):
-    global api_key,base_url,base2_url
-    api_key = app.config['NEWS_API_KEY']
-    base_url = app.config['NEWS_API_BASE_URL']
-    base2_url = app.config['ARTICLES_API_BASE_URL']
+# def configure_request(app):
+#     global api_key,base_url,base2_url
+#     api_key = app.config['NEWS_API_KEY']
+#     base_url = app.config['NEWS_API_BASE_URL']
+#     base2_url = app.config['ARTICLES_API_BASE_URL']
     
 
 
 def get_news(category):
     get_news_url = base_url.format(category, api_key)
+    print(get_news_url)
+
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
         get_news_response =json.loads(get_news_data)

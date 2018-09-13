@@ -2,7 +2,7 @@
 from flask import Flask
 from config import DevConfig
 from flask_bootstrap import Bootstrap
-from config import config_options
+from config import config_options , Config
 
 bootstrap = Bootstrap()
 
@@ -14,6 +14,7 @@ def create_app(config_name):
 
     #creating the app configurations
     app.config.from_object(config_options[config_name])
+    app.config.from_object(Config)
 
     #initializing flask extensions
     bootstrap.init_app(app)
@@ -26,8 +27,8 @@ def create_app(config_name):
     app.register_blueprint(main_blueprint)
 
     #setting config
-    from .request import configure_request
-    configure_request(app)
+    # from .request import configure_request
+    # configure_request(app)
 
     return app
 # 1.i imported the DevConfig class and then used the object method to pass configurations to the DevConfig
