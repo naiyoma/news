@@ -32,8 +32,17 @@ Inorder to clone , follow the procedure below;
 - CSS
 - Python
 - Flask
+
+##specifications
+| Behaviour | Input | Output
+| ----------|-------|------|
+| news sources|*On The Landing Page*|User can view all the diffrent sources
+|News Sources Displayed| on landing page|On clicking the link user can view different Articles
+| Articles from different| *on the page loading| on clicking the article the source is displayed
+
+
 ## Support and contact details
-- lamkas.aurelia@gmail.com
+- lankas.aurelia@gmail.com
 - 0702781830
 ### License
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
